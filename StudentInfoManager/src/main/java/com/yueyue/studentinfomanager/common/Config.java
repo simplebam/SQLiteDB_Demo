@@ -9,7 +9,7 @@ import org.jasypt.util.text.BasicTextEncryptor;
 public class Config {
 
     // 第一次进入主页
-    private static final String SHARE_USERNAME = "loginname";
+    private static final String SHARE_USERNAME = "username";
     private static final String SHARE_PASSWORD = "password";
     private static final String ENCRYPT_PASSWORD = "81399085ba848c87";
 
@@ -30,7 +30,7 @@ public class Config {
         SharedPreferences.Editor editor = context.getSharedPreferences(context.getPackageName(),
                 Context.MODE_PRIVATE).edit();
         editor.putString(SHARE_PASSWORD, encryptor.encrypt(password));//加密
-        editor.commit();
+        editor.apply();
     }
 
     public static String getCacheUserName(Context context) {
@@ -50,7 +50,7 @@ public class Config {
         SharedPreferences.Editor editor = context.getSharedPreferences(context.getPackageName(),
                 Context.MODE_PRIVATE).edit();
         editor.putString(SHARE_USERNAME, encryptor.encrypt(userName));
-        editor.commit();
+        editor.apply();
     }
 
     private static String encryptPass = null;
