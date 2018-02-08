@@ -87,7 +87,7 @@
                 android:background="@drawable/act_log_in_button_style"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
-                android:text="@string/login"
+                android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"/>
         </LinearLayout>

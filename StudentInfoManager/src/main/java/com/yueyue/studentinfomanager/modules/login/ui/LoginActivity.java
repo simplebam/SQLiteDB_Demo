@@ -76,7 +76,6 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void doRegister() {
-        ToastUtil.showShort("暂时没有开通!!!");
 
         final TableLayout tlPassword = (TableLayout) getLayoutInflater().inflate(R.layout.dialog_register_user, null);
         final EditText etUsername = (EditText) tlPassword.findViewById(R.id.et_username);
@@ -86,7 +85,7 @@ public class LoginActivity extends BaseActivity {
         final String password = etPassword.getText().toString().trim();
 
         new AlertDialog.Builder(LoginActivity.this)
-                .setTitle("修改登录密码")
+                .setTitle("注册账号密码")
                 .setView(tlPassword)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
