@@ -45,7 +45,7 @@ public class TestData {
 
         for (int i = 0; i < numberList.size(); i++) {
             ContentValues values = new ContentValues();
-            values.put("numberList", numberList.get(i));
+            values.put("number", numberList.get(i));
             values.put("name", nameList.get(i));
             values.put("gender", gender);
             values.put("native_place", nativePlace);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StudentInfoManager</string>
+    <string name="app_name">学生信息管理系统</string>
 
     <string name="input_account">请输入你的账号</string>
     <string name="input_password">请输入你的密码</string>

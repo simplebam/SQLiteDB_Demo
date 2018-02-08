@@ -77,12 +77,10 @@ public class LoginActivity extends BaseActivity {
 
     private void doRegister() {
 
-        final TableLayout tlPassword = (TableLayout) getLayoutInflater().inflate(R.layout.dialog_register_user, null);
+        TableLayout tlPassword = (TableLayout) getLayoutInflater().inflate(R.layout.dialog_register_user, null);
         final EditText etUsername = (EditText) tlPassword.findViewById(R.id.et_username);
         final EditText etPassword = (EditText) tlPassword.findViewById(R.id.et_password);
 
-        final String username = etUsername.getText().toString().trim();
-        final String password = etPassword.getText().toString().trim();
 
         new AlertDialog.Builder(LoginActivity.this)
                 .setTitle("注册账号密码")
@@ -90,6 +88,8 @@ public class LoginActivity extends BaseActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        String username = etUsername.getText().toString().trim();
+                        String password = etPassword.getText().toString().trim();
                         registerUser(username, password);
                     }
                 })
@@ -100,7 +100,7 @@ public class LoginActivity extends BaseActivity {
 
 
     private void registerUser(String username, String password) {
-        if (ValidateUtil.userName(username)) {
+        if (!ValidateUtil.userName(username)) {
             ToastUtil.showShort("账号只能为数字");
             return;
         }
@@ -112,6 +112,7 @@ public class LoginActivity extends BaseActivity {
 
         Config.cacheUserName(LoginActivity.this, username);
         Config.cachePassword(LoginActivity.this, password);
+        ToastUtil.showShort("注册成功");
     }
 
 
