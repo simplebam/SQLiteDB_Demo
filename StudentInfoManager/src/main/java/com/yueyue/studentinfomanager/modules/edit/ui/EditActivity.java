@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -19,6 +18,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.yueyue.studentinfomanager.R;
+import com.yueyue.studentinfomanager.base.BaseActivity;
 import com.yueyue.studentinfomanager.common.utils.ToastUtil;
 import com.yueyue.studentinfomanager.modules.main.db.DBManager;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
@@ -26,7 +26,7 @@ import com.yueyue.studentinfomanager.modules.main.domain.Person;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class EditActivity extends AppCompatActivity {
+public class EditActivity extends BaseActivity {
     //控件
     @BindView(R.id.btn_edit_back)
     Button btnBack;
@@ -71,10 +71,14 @@ public class EditActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit);
         receiveType();
         initView();
         receiveInfo();
+    }
+
+    @Override
+    protected int initLayoutId() {
+        return R.layout.activity_edit;
     }
 
 

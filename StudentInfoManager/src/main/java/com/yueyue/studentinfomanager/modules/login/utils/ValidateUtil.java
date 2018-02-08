@@ -9,7 +9,7 @@ import android.text.TextUtils;
 
 public class ValidateUtil {
 
-    private static final String NUMBER_PATTERN = "[^0-9-]+";
+    private static final String NUMBER_PATTERN = "^[0-9]*$";
 
     public static boolean userName(String userName) {
         return !userName.isEmpty() && userName.matches(NUMBER_PATTERN);

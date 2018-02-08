@@ -64,6 +64,7 @@ public class Config {
     }
 
     private static String getEncryptPass() {
+        if (encryptPass == null) setEncryptPass(null);
         return encryptPass;
     }
 
