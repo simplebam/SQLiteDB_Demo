@@ -60,11 +60,10 @@ PS:其实这项目跟手机联系人功能是差不多的,主要利用人的名�
 ### 项目截图
 <a href="./art/LocalSearchDemo_main1.png"><img src="./art/LocalSearchDemo_main1.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/LocalSearchDemo_main2.png"><img src="./art/LocalSearchDemo_main2.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
-App体验地址:
+App体验地址:[LocalSearchDemo](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v3.1/LocalSearchDemo-release.apk)
 
 
-
-## AbsolutePlan
+## AbsolutePlan-todo应用
 * 模仿的项目链接:[WoodsHo/AbsolutePlan: AbsolutePlan](https://github.com/WoodsHo/AbsolutePlan)
 
 ### 项目介绍
@@ -72,13 +71,8 @@ App体验地址:
 * APP功能专一、操作简单、界面优美，记录只保存在本地，不上传到服务端，不需要担心
   隐私泄露问题。
 
-### 涉及知识点
-* 对接口返回的数据进行排序
-* 根据排序进行分组
-* 对用户的输入进行智能匹配
-
-
 ### 项目截图
-<a href="./art/meizi.png"><img src="./art/meizi.png" width="40%"/></a><img height="0" width="8px"/><a href="./art/setting.png"><img src="./art/setting.png" width="40%"/></a>
+<img width="216" height="384" src="https://github.com/WoodsHo/AbsolutePlan/raw/master/readme/guide.gif"/>
 
-App体验地址:
+App体验地址:前往[原项目](https://github.com/WoodsHo/AbsolutePlan)下载打包
+           体验哈,因为此项目在我模仿范围之内,准备独特出一个仓库给他
