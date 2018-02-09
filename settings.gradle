@@ -1,1 +1,1 @@
-include ':StudentInfoManager', ':UseSQLiteDatabase'
+include ':StudentInfoManager', ':UseSQLiteDatabase', ':QuickIndex', ':LocalSearchDemo'

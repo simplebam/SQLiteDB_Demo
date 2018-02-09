@@ -9,7 +9,7 @@
 <a href="../art/UseSQLiteDatabase_add.png"><img src="../art/UseSQLiteDatabase_add.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="../art/UseSQLiteDatabase_main.png"><img src="../art/UseSQLiteDatabase_main.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
 <a href="../art/UseSQLiteDatabase_search.png"><img src="../art/UseSQLiteDatabase_search.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
-App体验地址:[StudentInfoManager](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v1.0/StudentInfoManager-release_v1.0.apk)
+App体验地址:[SQLiteDB_Demo](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v2.0/UseSQLiteDatabase-release_V1.0.apk)
 
 
 ### 项目中用到的知识

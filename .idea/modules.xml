@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LocalSearchDemo/LocalSearchDemo.iml" filepath="$PROJECT_DIR$/LocalSearchDemo/LocalSearchDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickIndex/QuickIndex.iml" filepath="$PROJECT_DIR$/QuickIndex/QuickIndex.iml" />
       <module fileurl="file://$PROJECT_DIR$/SQLiteDB_Demo.iml" filepath="$PROJECT_DIR$/SQLiteDB_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentInfoManager/StudentInfoManager.iml" filepath="$PROJECT_DIR$/StudentInfoManager/StudentInfoManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/UseSQLiteDatabase/UseSQLiteDatabase.iml" filepath="$PROJECT_DIR$/UseSQLiteDatabase/UseSQLiteDatabase.iml" />
