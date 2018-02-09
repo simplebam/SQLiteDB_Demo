@@ -19,7 +19,6 @@ import com.yueyue.studentinfomanager.modules.main.db.StudentDB;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
 import com.yueyue.studentinfomanager.modules.search.adapter.SearchAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -57,7 +56,7 @@ public class SearchActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        initView();
         receiveSearchType();
         DBManager.getInstance().openDatabase();//关闭数据库
     }
@@ -85,8 +84,6 @@ public class SearchActivity extends BaseActivity {
     }
 
     private void refreshRecyclerView(String s) {
-        ArrayList<String> number = new ArrayList<>();
-        ArrayList<String> name = new ArrayList<>();
 
         String selectionStr = currentSearchType == TYPE_SEARCH_NUMBER ? "number" : "name";
 
