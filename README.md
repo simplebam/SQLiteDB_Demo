@@ -1,8 +1,8 @@
 # SQLiteDB_Demo
-网上很少有关于SQLite简单综合项目的简易APP,同时把自己所学的部分UI综合一下，希望
-能给新手一些帮助。
+网上很少有关于SQLite简单综合项目的简易APP,这里我打算把自己所学的以及网上找到的
+资源集合起来，为开源出一份力。
 
-注意:这里全都是使用Java实现的
+注意:这里全都是使用Java实现的,kotlin朋友请绕道
 
 ## StudentInfoManager
 * 模仿的项目链接:[Android应用开发-学生信息管理系统 - CSDN博客](http://blog.csdn.net/double2hao/article/details/52641074)
@@ -29,7 +29,8 @@ App体验地址:[StudentInfoManager](https://github.com/simplebam/SQLiteDB_Demo/
 我们要做一个简单的学生管理的demo，创建student.db，包括name,grade字段，实现增、删、改、查的功能；
 
 ### 项目截图
-<a href="./art/meizi.png"><img src="./art/meizi.png" width="40%"/></a><img height="0" width="8px"/><a href="./art/setting.png"><img src="./art/setting.png" width="40%"/></a>
+<a href="./art/UseSQLiteDatabase_add.png"><img src="./art/UseSQLiteDatabase_add.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/UseSQLiteDatabase_main.png"><img src="./art/UseSQLiteDatabase_main.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
+<a href="./art/UseSQLiteDatabase_search.png"><img src="./art/UseSQLiteDatabase_search.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
 App体验地址:
 
