@@ -32,19 +32,22 @@ App体验地址:[StudentInfoManager](https://github.com/simplebam/SQLiteDB_Demo/
 <a href="./art/UseSQLiteDatabase_add.png"><img src="./art/UseSQLiteDatabase_add.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/UseSQLiteDatabase_main.png"><img src="./art/UseSQLiteDatabase_main.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
 <a href="./art/UseSQLiteDatabase_search.png"><img src="./art/UseSQLiteDatabase_search.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
+### 涉及知识点
+* 对数据进行排序(主要利用comparable以及comparator接口知识)
+
 App体验地址:[SQLiteDB_Demo](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v2.0/UseSQLiteDatabase-release_V1.0.apk)
 
 
-## QuickIndex-联系人功能demo
+## QuickIndex-联系人快速索引demo
 我以前学习自定义View的demo,可能看代码小伙伴会疲劳,免费视频链接(可下载):[自定义控件_初始化显示字母列表](http://www.gulixueyuan.com/course/124/task/1923/show)
 
 ### 项目截图
 <a href="./art/QuickIndex_main1.png"><img src="./art/QuickIndex_main1.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/QuickIndex_main2.png"><img src="./art/QuickIndex_main2.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
 
-App体验地址:
+App体验地址:[QuickIndex](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v3.0/QuickIndex-release.apk)
 
 
-## 城市列表的排序及模糊查询
+## 城市列表的排序及模糊查询demo
 * 模仿的项目链接:[实现城市列表的排序及模糊查询 - 简书](https://www.jianshu.com/p/0ea45116f475)
 
 ### 涉及知识点
