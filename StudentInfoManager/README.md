@@ -9,10 +9,11 @@
 
 
 ### 项目截图
-<a href="./art/meizi.png"><img src="./art/meizi.png" width="40%"/></a><img height="0" width="8px"/><a href="./art/setting.png"><img src="./art/setting.png" width="40%"/></a>
+### 项目截图
+<a href="../art/StudentInfoManager_main1.png"><img src="../art/StudentInfoManager_main1.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="../art/StudentInfoManager_main2.png"><img src="../art/StudentInfoManager_main2.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
+<a href="../art/StudentInfoManager_login.png"><img src="../art/StudentInfoManager_login.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="../art/StudentInfoManager_search.png"><img src="../art/StudentInfoManager_search.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
-App体验地址:[学生信息管理系统-CSDN下载 ](http://download.csdn.net/download/double2hao/9638397)
-
+App体验地址:[StudentInfoManager](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v1.0/StudentInfoManager-release_v1.0.apk)
 
 
 ### 项目中用到的知识
@@ -40,7 +41,9 @@ App体验地址:[学生信息管理系统-CSDN下载 ](http://download.csdn.net/
 ### 项目中用到的框架
 * ButterKnife
   * [[Android开发] ButterKnife8.5.1 使用方法教程总结 - CSDN博客](http://blog.csdn.net/niubitianping/article/details/54893571)
-
+*
 
 ### 开发中遇到的问题
-* 这里我准备使用TextInputLayout创建一个登陆界面
+* 这里的数据库开闭我处理的还不是很好,这里我建议不太熟悉数据库的朋友们可以更换为
+  [LitePal](https://github.com/LitePalFramework/LitePal)
+

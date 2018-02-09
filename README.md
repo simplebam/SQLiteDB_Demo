@@ -15,9 +15,10 @@
 
 
 ### 项目截图
-<a href="./art/meizi.png"><img src="./art/meizi.png" width="40%"/></a><img height="0" width="8px"/><a href="./art/setting.png"><img src="./art/setting.png" width="40%"/></a>
+<a href="./art/StudentInfoManager_main1.png"><img src="./art/StudentInfoManager_main1.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/StudentInfoManager_main2.png"><img src="./art/StudentInfoManager_main2.png" width="20%" height="20%"/></a><img height="0" width="8px"/>
+<a href="./art/StudentInfoManager_login.png"><img src="./art/StudentInfoManager_login.png" width="20%" height="20%"/></a><img height="0" width="8px"/><a href="./art/StudentInfoManager_search.png"><img src="./art/StudentInfoManager_search.png" width="20%" height="20%"/></a><img height="0" width="8px"/><br/>
 
-App体验地址:[学生信息管理系统-CSDN下载 ](http://download.csdn.net/download/double2hao/9638397)
+App体验地址:[StudentInfoManager](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v1.0/StudentInfoManager-release_v1.0.apk)
 
 
 
