@@ -13,6 +13,7 @@ import com.yueyue.studentinfomanager.modules.edit.ui.EditActivity;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 项目名称：StudentInfoManager
@@ -21,11 +22,11 @@ import java.util.ArrayList;
  * 修改备注：
  */
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
-    private ArrayList<Person> mDataList;
+    private List<Person> mDataList;
     private Context mContext;
 
     public SearchAdapter(Context context,
-                         ArrayList<Person> dataList) {
+                         List<Person> dataList) {
         mContext = context;
         mDataList = dataList;
     }

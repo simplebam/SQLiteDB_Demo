@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -33,12 +32,13 @@ import com.yueyue.studentinfomanager.modules.edit.ui.EditActivity;
 import com.yueyue.studentinfomanager.modules.login.utils.ValidateUtil;
 import com.yueyue.studentinfomanager.modules.main.adapter.MainAdapter;
 import com.yueyue.studentinfomanager.modules.main.db.DBManager;
+import com.yueyue.studentinfomanager.modules.main.db.StudentDB;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
 import com.yueyue.studentinfomanager.modules.main.test.TestData;
 import com.yueyue.studentinfomanager.modules.personal.ui.PersonalActivity;
 import com.yueyue.studentinfomanager.modules.search.ui.SearchActivity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity
         extends BaseActivity
@@ -66,6 +66,7 @@ public class MainActivity
 
         initData();
         initView();
+        DBManager.getInstance().openDatabase();//开启数据库
 
     }
 
@@ -84,6 +85,8 @@ public class MainActivity
             SpUtils.putBoolean(C.IS_FIRST_START, false);
         }
 
+        List<Person> personList = StudentDB.query(DBManager.getInstance().getDatabase());
+        if (personList.size() <= 0) TestData.create();
     }
 
 
@@ -209,28 +212,7 @@ public class MainActivity
     }
 
     private void refreshRecyclerView() {
-        ArrayList<Person> personList = new ArrayList<>();
-        Cursor cursor = DBManager.getInstance().query("student");
-        if (cursor != null && cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-                Person person = new Person();
-                person.name = cursor.getString(cursor.getColumnIndex("name"));
-                person.number = cursor.getString(cursor.getColumnIndex("number"));
-                person.gender = cursor.getString(cursor.getColumnIndex("gender"));
-                person.birth = cursor.getString(cursor.getColumnIndex("birth"));
-                person.nativePlace = cursor.getString(cursor.getColumnIndex("native_place"));
-                person.specialty = cursor.getString(cursor.getColumnIndex("specialty"));
-                person.phone = cursor.getString(cursor.getColumnIndex("phone"));
-                personList.add(person);
-
-                //最多查询50条
-                if (personList.size() >= 50) {
-                    break;
-                }
-            }
-            cursor.close();
-        }
-
+        List<Person> personList = StudentDB.query(DBManager.getInstance().getDatabase());
         mRvMain.setAdapter(new MainAdapter(this, personList));
 
     }
@@ -267,7 +249,7 @@ public class MainActivity
 
     @Override
     protected void onDestroy() {
-        DBManager.getInstance().close();//关闭数据库
+        DBManager.getInstance().closeDatabase();//关闭数据库
         super.onDestroy();
     }
 

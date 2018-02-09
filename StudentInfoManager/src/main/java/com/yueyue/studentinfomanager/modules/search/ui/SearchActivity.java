@@ -2,7 +2,6 @@ package com.yueyue.studentinfomanager.modules.search.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,12 +14,13 @@ import android.widget.EditText;
 
 import com.yueyue.studentinfomanager.R;
 import com.yueyue.studentinfomanager.base.BaseActivity;
-import com.yueyue.studentinfomanager.modules.main.adapter.MainAdapter;
 import com.yueyue.studentinfomanager.modules.main.db.DBManager;
+import com.yueyue.studentinfomanager.modules.main.db.StudentDB;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
 import com.yueyue.studentinfomanager.modules.search.adapter.SearchAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -59,6 +59,7 @@ public class SearchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         receiveSearchType();
+        DBManager.getInstance().openDatabase();//关闭数据库
     }
 
 
@@ -88,34 +89,13 @@ public class SearchActivity extends BaseActivity {
         ArrayList<String> name = new ArrayList<>();
 
         String selectionStr = currentSearchType == TYPE_SEARCH_NUMBER ? "number" : "name";
-        Cursor cursor = DBManager.getInstance().query("student", null,
+
+        List<Person> personList = StudentDB.query(DBManager.getInstance().getDatabase(), null,
                 selectionStr + " like ?", new String[]{"%" + s + "%"},
                 null, null, null);
 
-        ArrayList<Person> personList = new ArrayList<>();
-        if (cursor != null && cursor.getCount() > 0) {
-            while (cursor.moveToNext()) {
-                Person person = new Person();
-                person.name = cursor.getString(cursor.getColumnIndex("name"));
-                person.number = cursor.getString(cursor.getColumnIndex("number"));
-                person.gender = cursor.getString(cursor.getColumnIndex("gender"));
-                person.birth = cursor.getString(cursor.getColumnIndex("birth"));
-                person.nativePlace = cursor.getString(cursor.getColumnIndex("native_place"));
-                person.specialty = cursor.getString(cursor.getColumnIndex("specialty"));
-                person.phone = cursor.getString(cursor.getColumnIndex("phone"));
-                personList.add(person);
-
-                //最多查询50条
-                if (personList.size() >= 50) {
-                    break;
-                }
-            }
-            cursor.close();
-        }
 
         rvSearch.setAdapter(new SearchAdapter(this, personList));
-
-
 
 
     }
@@ -132,7 +112,7 @@ public class SearchActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         if (myTextWatcher != null) etSearch.removeTextChangedListener(myTextWatcher);
-        DBManager.getInstance().close();
+        DBManager.getInstance().closeDatabase();//关闭数据库
         super.onDestroy();
     }
 

@@ -3,6 +3,7 @@ package com.yueyue.studentinfomanager.modules.main.test;
 import android.content.ContentValues;
 
 import com.yueyue.studentinfomanager.modules.main.db.DBManager;
+import com.yueyue.studentinfomanager.modules.main.db.StudentDB;
 
 import java.util.ArrayList;
 
@@ -52,7 +53,8 @@ public class TestData {
             values.put("specialty", specialty);
             values.put("phone", phone);
             values.put("birth", birth);
-            DBManager.getInstance().insert("student", null, values);
+
+            StudentDB.insert(DBManager.getInstance().getDatabase(), null, values);
         }
     }
 }

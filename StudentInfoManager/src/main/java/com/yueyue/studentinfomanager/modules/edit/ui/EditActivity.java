@@ -5,7 +5,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,7 +20,10 @@ import com.yueyue.studentinfomanager.R;
 import com.yueyue.studentinfomanager.base.BaseActivity;
 import com.yueyue.studentinfomanager.common.utils.ToastUtil;
 import com.yueyue.studentinfomanager.modules.main.db.DBManager;
+import com.yueyue.studentinfomanager.modules.main.db.StudentDB;
 import com.yueyue.studentinfomanager.modules.main.domain.Person;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -74,6 +76,7 @@ public class EditActivity extends BaseActivity {
         receiveType();
         initView();
         receiveInfo();
+        DBManager.getInstance().openDatabase();//开启数据库
     }
 
     @Override
@@ -174,12 +177,12 @@ public class EditActivity extends BaseActivity {
 
         switch (currentType) {
             case TYPE_ADD:
-                DBManager.getInstance().insert("student", null, values);
+                StudentDB.insert(DBManager.getInstance().getDatabase(), null, values);
                 ToastUtil.showShort("添加数据成功");
                 break;
             case TYPE_EDIT:
-                DBManager.getInstance().update("student", values,
-                        "number=?", new String[]{number});
+                StudentDB.update(DBManager.getInstance().getDatabase(),
+                        values, "number=?", new String[]{number});
                 ToastUtil.showShort("数据修改成功");
                 break;
         }
@@ -227,7 +230,8 @@ public class EditActivity extends BaseActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DBManager.getInstance().delete("student", "number=?", new String[]{number});
+                        StudentDB.delete(DBManager.getInstance().getDatabase(),
+                                "number=?", new String[]{number});
                         ToastUtil.showShort("该学生信息删除成功！");
                         finish();
                     }
@@ -239,7 +243,7 @@ public class EditActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        DBManager.getInstance().close();
+        DBManager.getInstance().closeDatabase();
         super.onDestroy();
     }
 
@@ -253,9 +257,9 @@ public class EditActivity extends BaseActivity {
     }
 
     private boolean sameNumber(String number) {
-        Cursor cursor = DBManager.getInstance().query("student", null, "number=?", new String[]{number}, null, null, null);
-        int count = cursor != null && cursor.getCount() > 0 ? cursor.getCount() : 0;
-        if (cursor != null) cursor.close();
-        return count > 0;
+        List<Person> personList = StudentDB.query(DBManager.getInstance().getDatabase(),
+                null, "number=?", new String[]{number}, null,
+                null, null);
+        return personList.size() > 0;
     }
 }
