@@ -12,6 +12,7 @@ import com.yueyue.studentinfomanager.R;
 import com.yueyue.studentinfomanager.base.BaseActivity;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class PersonalActivity extends BaseActivity {
 
@@ -38,12 +39,10 @@ public class PersonalActivity extends BaseActivity {
             //透明状态栏
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+    }
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+    @OnClick(R.id.btn_my_info_back)
+    public void onClick(View view) {
+        finish();
     }
 }

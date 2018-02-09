@@ -88,7 +88,7 @@ public class EditActivity extends BaseActivity {
     //获取当前的编辑类型，是增添或者编辑
     private void receiveType() {
         Intent intent = this.getIntent();
-        currentType = intent.getIntExtra("type", TYPE_ADD);
+        currentType = intent.getIntExtra("search_type", TYPE_ADD);
     }
 
     private void initView() {

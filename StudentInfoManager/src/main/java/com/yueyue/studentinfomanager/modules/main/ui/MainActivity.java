@@ -164,15 +164,14 @@ public class MainActivity
         final EditText etOldPassword = (EditText) tlPassword.findViewById(R.id.et_main_old_password);
         final EditText etNewPassword = (EditText) tlPassword.findViewById(R.id.et_main_new_password);
 
-        final String oldPassword = etOldPassword.getText().toString().trim();
-        final String newPassword = etNewPassword.getText().toString().trim();
-
         new AlertDialog.Builder(MainActivity.this)
                 .setTitle("修改登录密码")
                 .setView(tlPassword)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        String oldPassword = etOldPassword.getText().toString().trim();
+                        String newPassword = etNewPassword.getText().toString().trim();
                         updatePassword(oldPassword, newPassword);
                     }
                 })
@@ -183,16 +182,18 @@ public class MainActivity
 
     private void updatePassword(String oldPassword, String newPassword) {
         if (!oldPassword.equals(Config.getCachePassword(MainActivity.this))) {
-            ToastUtil.showShort("原密码错误！");
+            ToastUtil.showShort("原密码错误,修改失败！");
             return;
         }
 
-        if (ValidateUtil.password(newPassword)) {
-            Config.cachePassword(MainActivity.this, newPassword);
-            ToastUtil.showShort("修改密码成功");
-        } else {
+        if (!ValidateUtil.password(newPassword)) {
             ToastUtil.showShort("新密码必要要6位以上");
+            return;
         }
+
+        Config.cachePassword(MainActivity.this, newPassword);
+        ToastUtil.showShort("修改密码成功");
+
     }
 
 
