@@ -63,16 +63,17 @@ PS:其实这项目跟手机联系人功能是差不多的,主要利用人的名�
 App体验地址:[LocalSearchDemo](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v3.1/LocalSearchDemo-release.apk)
 
 
-## AbsolutePlan-todo应用
-* 模仿的项目链接:[WoodsHo/AbsolutePlan: AbsolutePlan](https://github.com/WoodsHo/AbsolutePlan)
+## 
+* 模仿的项目链接:[手把手教你从零开始做一个好看的 APP - 简书](https://www.jianshu.com/p/8d2d74d6046f)
 
 ### 项目介绍
-* 这是一个只专注于帮助你记录、管理日常计划任务的工具类APP。
-* APP功能专一、操作简单、界面优美，记录只保存在本地，不上传到服务端，不需要担心
-  隐私泄露问题。
+既然要做一个 APP，那我们首先还是得把 APP 的功能都列出来，有了方向才能更好的努力，因为我想做的是一个专门给睡觉前用的 APP，所以我觉得应该有以下的这些功能
+
+1、日记的增删改
+2、显示一些有趣好玩的段子
+3、瀑布流展示漂亮的妹子
+4、保存日记的内容以及缓存妹子图片
+虽然说需求不多，但是却要运用到网络、数据存储、图片缓存、UI 设计等内容，相信整个 APP 完成下来，必定能巩固我们的 Android 基础。
 
 ### 项目截图
-<img width="216" height="384" src="https://github.com/WoodsHo/AbsolutePlan/raw/master/readme/guide.gif"/>
-
-App体验地址:前往[原项目](https://github.com/WoodsHo/AbsolutePlan)下载打包
-           体验哈,因为此项目在我模仿范围之内,准备独特出一个仓库给他
+![SleepHelper](http://upload-images.jianshu.io/upload_images/4334738-acaaea47739bc4b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
