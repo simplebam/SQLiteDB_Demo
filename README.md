@@ -63,7 +63,7 @@ PS:其实这项目跟手机联系人功能是差不多的,主要利用人的名�
 App体验地址:[LocalSearchDemo](https://github.com/simplebam/SQLiteDB_Demo/releases/download/v3.1/LocalSearchDemo-release.apk)
 
 
-## 
+## SleepHelper  
 * 模仿的项目链接:[手把手教你从零开始做一个好看的 APP - 简书](https://www.jianshu.com/p/8d2d74d6046f)
 
 ### 项目介绍
